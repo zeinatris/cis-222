@@ -6,7 +6,7 @@
  *
  * @category   Quiz
  * @package    Quiz 1
- * @author     Chad Banks <crbanks1@hfcc.edu>
+ * @author     Zein Atris <zhatris@hawkmail.hfcc.edu>
  * @version    2020.09.10
  * @link       X
  */
@@ -19,7 +19,7 @@
 // 2 pts
 // 2. Add a link tag to the HTML frame above, and name the file style.css
 // (this file does not need to really exist for this quiz)
-        <a href="style.css"></a>
+        <link rel="stylesheet" href="style.css">
     </head>
 
 // 2 pts
