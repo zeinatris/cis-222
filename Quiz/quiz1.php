@@ -8,11 +8,12 @@
  * @package    Quiz 1
  * @author     Zein Atris <zhatris@hawkmail.hfcc.edu>
  * @version    2020.09.10
- * @link       X
+ * @grade      10 / 10
  */
 
 // 3 pts
 // 1. Create a basic HTML 5 page frame below.
+<!doctype html>
 <html>
     <head>
 
@@ -42,6 +43,8 @@ Inheritance is a well-established programming principle, and PHP makes use of th
 
 // 1 pt
 // 6. What are the programs you intend to use for this class? List them below.
-php
+// These are technologies listed below, not programs. I meant like PhpStorm, FileZilla, Notepad++, etc.
+php 
 html
 mysql
+     
