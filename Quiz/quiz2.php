@@ -7,7 +7,7 @@
  *
  * @category   Quiz
  * @package    Quiz 2
- * @author     Chad Banks <crbanks1@hfcc.edu>
+ * @author     Zein Atris <zhatris@hawkmail.hfcc.edu>
  * @version    2020.09.17
  * @grade
  */
