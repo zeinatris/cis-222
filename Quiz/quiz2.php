@@ -39,7 +39,7 @@ echo MOVIE_TITLE;
 $classes = ["cis122", "cis126", "cis130", "cis129"];
 foreach( $classes as $class)
     echo "$class<br>";
-
+?>
 // 1 ex pts
 // 5. List 2 more escape characters not used in the example below, and what they output when used.
 // Example: "\$" will output a $.
