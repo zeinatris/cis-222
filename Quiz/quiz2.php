@@ -25,7 +25,7 @@ echo $name.$sentence;
 // Once complete, the data sent to the browser should look exactly like this....
 // <p>The Keanu Reeves</p>
 $name = "Keanu Reeves";
-echo 'The ' . $name;
+echo '<p> The ' . $name .'</p>';
 
 // 2 pts
 // 3. Define a constant called MOVIE_TITLE and set it to the following string.
