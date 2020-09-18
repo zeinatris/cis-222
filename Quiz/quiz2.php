@@ -25,13 +25,14 @@ echo $name.$sentence;
 // Once complete, the data sent to the browser should look exactly like this....
 // <p>The Keanu Reeves</p>
 $name = "Keanu Reeves";
-echo '<p>The Keanu Reeves</p>';
+echo 'The ' . $name;
 
 // 2 pts
 // 3. Define a constant called MOVIE_TITLE and set it to the following string.
 // "The Matrix"
-define("MOVIE_TITLE", "The Matrix");
 
+const MOVIE_TITLE = "The Matrix <br>";
+echo MOVIE_TITLE;
 // 3 pts
 // 4. Define an array called $classes and populate it with strings containing the classes you have taken at HFC (at least 3 or 4).
 //		Then use a foreach loop to step through that array and echo their contents, don't forget to format with <br> tags.
