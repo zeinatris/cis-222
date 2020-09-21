@@ -1,4 +1,5 @@
 <?php
+//https://cislinux.hfcc.edu/~zhatris/cis222/HW2/
 var_dump($_POST);
 
 echo '<br><br><h3>POST</h3>';
