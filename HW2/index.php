@@ -6,14 +6,14 @@ echo '<br><br><h3>POST</h3>';
     $students = ["Chad", "Farhana", "Colin", "Ali", "Zein"];
     $arrLength = $students;
 if ($students > 5){
-    echo "We have enough students";
+    echo "We have enough students<br>";
 }
 else {
     echo "Not enough students";
 }
-    foreach ($students as $student) ;
+foreach ($students as $student) {
         echo "$student<br>";
-
+    }
 ?>
 
 <form method="post" action="index.php" >
