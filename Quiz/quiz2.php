@@ -9,7 +9,7 @@
  * @package    Quiz 2
  * @author     Zein Atris <zhatris@hawkmail.hfcc.edu>
  * @version    2020.09.17
- * @grade       9 / 10
+ * @grade       11 / 10
  */
 
 // 2 pts
@@ -27,7 +27,7 @@ echo $name.$sentence;
 $name = "Keanu Reeves";
 echo '<p> The ' . $name .'</p>';
 
-// 0 / 2 pts
+// 2 / 2 pts
 // 3. Define a constant called MOVIE_TITLE and set it to the following string.
 // "The Matrix"
 define( 'MOVIE_TITLE', 'The Matrix' );
