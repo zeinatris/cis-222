@@ -54,7 +54,19 @@ INSERT INTO `Persons`
  `create_date`,
  `update_date`,
  `delete_date`
- );
+ )
+
+ VALUES
+(
+ NULL,
+ 'Ali',
+ 'Atris',
+ '3434 Mickey st.',
+ 'dearborn',
+ NOW(),
+ NOW(),
+ NULL
+);
 
  INSERT INTO `Players`
  (`PlayersId`,
@@ -65,7 +77,19 @@ INSERT INTO `Persons`
   `create_date`,
   `update_date`,
   `delete_date`
-  );
+  )
+
+VALUES
+(
+ NULL,
+ '5,8',
+ '130',
+ 'M',
+ 'M',
+ NOW(),
+ NOW(),
+ NULL
+);
 
 INSERT INTO `Employees`
 (`EmployeeId`,
@@ -77,16 +101,42 @@ INSERT INTO `Employees`
  `create_date`,
  `update_date`,
  `delete_date`
- );
+ )
 
-UPDATE `Persons`;
-UPDATE `Players`;
-UPDATE `Employees`;
+VALUES
+(
+    NULL,
+    'Zein',
+    'Atris',
+    'za@yahoo.com',
+    '24',
+    '2',
+    NOW(),
+    NOW(),
+    NULL
+);
 
-DELETE FROM Persons WHERE FirstName = 'Zein';
+UPDATE `Persons`
+SET FirstName = 'John'
+WHERE LastName = 'Apple';
+
+UPDATE `Players`
+SET Height = '5,10'
+WHERE Weight = '150';
+
+UPDATE `Employees`
+SET EmpFirstName = 'Ahmad'
+WHERE EmpAge = '38';
+
+DELETE FROM Persons WHERE FirstName = 'Ali';
 
 SELECT * FROM `Persons`;
-SELECT `PersonsId`, `email` FROM users;
+SELECT `PersonID`, `FirstName` FROM `Persons`;
 
+SELECT * FROM `Players`;
+SELECT `PlayersId`, `Height` FROM `Players`;
+
+SELECT * FROM `Employees`;
+SELECT `EmployeeId`, `EmpFirstName` FROM `Employees`;
 
 
