@@ -3,7 +3,7 @@ echo '<!DOCTYPE html><html lang="en" >';
 
 require('templates/head.php');
 
-echo '<body style="margin:auto;width:75%;" >';
+echo '<body>';
 
 // Render Body
 require('templates/nav.php');
