@@ -5,7 +5,7 @@
  *
  * @category   SQL
  * @package    Quiz 4
- * @author     Chad R. Banks <crbanks1@hfcc.edu>
+ * @author     Zein Atris <zhatris@hawkmail.hfcc.edu>
  * @version    2020.10.08
  * @grade
  */
