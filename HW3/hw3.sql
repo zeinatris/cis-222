@@ -1,3 +1,14 @@
+/**
+ * HW3
+ *
+ * @category   SQL
+ * @package    CIS-222
+ * @author     
+ * @date       2020.10.08
+ * @grade      10 / 10
+ * @comments   Comments?
+ */
+ 
 USE zhatris;
 SHOW TABLES;
 
