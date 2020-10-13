@@ -7,7 +7,7 @@
  * @package    Quiz 4
  * @author     Zein Atris <zhatris@hawkmail.hfcc.edu>
  * @version    2020.10.08
- * @grade
+ * @grad	8.5 / 10
  */
 
 /* 4 pts
@@ -55,16 +55,15 @@ UPDATE `Hardware`
 SET `Notes` = "RETIRED!"
 WHERE `Value` = 4;
 
--- 1 pts
+-- 0.5/1 pts
 -- 4. Write a select statement that will show me the top 5 most expensive pieces of hardware, but do not include any that are retired.
-SELECT TOP 5  FROM `Hardware` WHERE `Notes` NOT LIKE "RETIRED!"
-ORDER BY `Value` DESC ;
--- 1 pt
+SELECT * FROM `Hardware` WHERE `Notes` NOT LIKE "RETIRED!"
+ORDER BY `Value` DESC LIMIT 5 ;
+-- 0/1 pt
 -- 5. Which engine did I go over that is newer and more efficient than MyISAM?
-MYSQLI
+InnoDB
 
--- 1 pt
+-- 0/1 pt
 -- Ex: Write a single SWL statement that will remove all the data from your table and reset the auto_increment to 1
 --     Do this without the use of the DROP key word.
-DELETE FROM `Hardware`;
-ALTER TABLE `Hardware` AUTO_INCREMENT = 1
+TRUNCATE TABLE `Hardware`;
