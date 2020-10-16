@@ -14,11 +14,13 @@ if( isset($_GET['action']) )
 					( NULL, ?,?,? NOW(), NOW(), NULL );  ";
 
         $stmt = $pdo->prepare( $qry );
-        $r = $stmt -> execute([$_GET['Contact']]);
+        $r = $stmt -> execute([$_GET['name'],$_GET['email'],$_GET['message']]);
 
         if( $r )
         {
+           
             $_GLOBAL['Contact_message'] = '<div class="alert alert-success" role="alert">Location Saved!</div>';
         }
+
     }
 }

@@ -18,15 +18,15 @@ if( isset($_GLOBAL['Contact_message']) )
 
 
     <form action="index.php" method="get">
-
+        <input type="hidden" name="page" value="contact">
         <label for="name">Name: </label>
         <input id="name" type="text" name="name" placeholder="Name" required><br> <br>
 
         <label for="email">Email: </label>
         <input id="email" type="text" name="email" placeholder="Email" required><br> <br>
         <div class="c">
-            <label for="text">Message</label><br>
-            <textarea rows="4" cols="50" id="text" placeholder="Message"></textarea><br>
+            <label for="text" >Message</label><br>
+            <textarea name="message" rows="4" cols="50" id="text" placeholder="Message"></textarea><br>
         </div>
         <input type="submit">
     </form>

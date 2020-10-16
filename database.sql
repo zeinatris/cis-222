@@ -21,6 +21,7 @@ CREATE TABLE `Product`(
    `ItemDescription`   VARCHAR(200) NOT NULL,
    `ItemPrice`       Decimal (7,2) NOT NULL,
    `ItemQty`      int(11) NOT NULL,
+   `Img` blob,
    `create_date` DATETIME NOT NULL,
    `update_date` DATETIME NOT NULL,
    `delete_date` DATETIME DEFAULT NULL,
@@ -59,6 +60,7 @@ VALUES
 (4,'DARSIDERS III PS4','<p>This is brand new never been opened</p>','19.99','20',NOW(),NOW(),NULL),
 (5,'CALL OF DUTY MW PS4','<p>This is brand new never been opened</p>','49.99','30',NOW(),NOW(),NULL),
 (6,'GTA V PS4','<p>This is brand new never been opened</p>','29.99','30',NOW(),NOW(),NULL);
+
 
 SELECT * FROM `Customer`;
 SELECT * FROM `Product`;
