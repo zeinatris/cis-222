@@ -1,6 +1,6 @@
 <?php
-include('../../../creds.php');
 
+/* this connects to the database*/
 $host = '127.0.0.1';
 $db = 'zhatris';
 $user = 'zhatris';
@@ -31,3 +31,4 @@ while ($row = $stmt -> fetch()):
     <?php
     endwhile;
 ?>
+<button onclick="history.go(-1);">Back </button>

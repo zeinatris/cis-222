@@ -1,4 +1,15 @@
 <?php
+/**
+ * HW3
+ *
+ * @category   SQL
+ * @package    CIS-222
+ * @author     Zein Atris
+ * @date       2020.10.08
+ * @grade
+ * @comments
+ * @link https://cislinux.hfcc.edu/~zhatris/cis222/HW4/index.php
+ */
 require ('describeTable.php');
 /*Connecting to the database*/
 $qry1 = 'SHOW TABLES';

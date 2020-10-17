@@ -39,3 +39,4 @@ if(isset($_POST['update'])) {
         <input type="submit" value="Update" name="update">
     </div>
 </form>
+<button onclick="history.go(-1);">Back </button>
