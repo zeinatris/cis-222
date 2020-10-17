@@ -16,18 +16,3 @@ $opt =
     ];
 
 $pdo = new PDO($dsn, $user, $pass, $opt);
-
- ?>
-
-<?php
-$qry1 = 'SHOW TABLES';
-$all = array('Contact'); var_dump($all);
-$stmt = $pdo->query( $qry1 );
-$r1 = $stmt -> execute();
-while ($row = $stmt -> fetch()):
-    ?>
-    <a href='describeTable.php?page=<?php echo $row["Tables_in_zhatris"];?>'><?php echo $row["Tables_in_zhatris"];?></a><br>
-
-    <?php
-    endwhile;
-?>

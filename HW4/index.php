@@ -1,25 +1,23 @@
 <?php
-include_once('describeTable.php');
+require ('describeTable.php');
 /*Connecting to the database*/
 $qry1 = 'SHOW TABLES';
 
 /*Looping through the results and echoing each table to the screen*/
 $stmt = $pdo->prepare( $qry1 );
 $r1 = $stmt -> execute();
-while ($row = $stmt -> fetch())  {?>
-
-    <hr />    <br><br><a href="describeTable.php?page=Contact">Contact</a>
-<br><br><a href="describeTable.php?page=Customer">Customer</a>
-<br><br><a href="describeTable.php?page=Employees">Employees</a>
-<br><br><a href="describeTable.php?page=Midterm_Animal">Midterm_Animal</a>
-<br><br><a href="describeTable.php?page=P">P</a>
-<br><br><a href="describeTable.php?page=Persons">Persons</a>
-<br><br><a href="describeTable.php?page=Players">Players</a>
-<br><br><a href="describeTable.php?page=Product">Products</a>
-<br><br><a href="describeTable.php?page=Orders">Orders</a>
-<br><br><a href="describeTable.php?page=Payments">Payments</a>
-<hr />
+while ($row = $stmt -> fetch()):?>
+    <a href='describeTable.php'>
+        <a href="describeTable.php?page=contact">Contact</a><br>
+        <a href="describeTable.php?page=customer">Customer</a><br>
+        <a href="describeTable.php?page=employees">Employees</a><br>
+        <a href="describeTable.php?page=midterm_animals">Midterm_Animals</a><br>
+        <a href="describeTable.php?page=persons">Persons</a><br>
+        <a href="describeTable.php?page=player">Players</a><br>
+        <a href="describeTable.php?page=midterm_cars">midterm_cars</a><br>
+        <a href="describeTable.php?page=orders">orders</a><br>
+        <a href="describeTable.php?page=payment">payment</a><br>
 <?php
-}
+endwhile;
 ?>
 

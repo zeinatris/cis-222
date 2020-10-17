@@ -9,6 +9,7 @@ require ('dbs.php');
 </head>
 <body>
 <form action="index.php" method="post">
+    Id:   <input type="text" name="id">
     Name: <input type="text" name="username">
     <br>
     Email: <input type="text" name="email">
