@@ -1,4 +1,5 @@
 <?php
+//This updates the data//
 if(isset($_POST['update'])) {
     $id = $_POST['id'];
     $make = $_POST['make'];
@@ -18,6 +19,7 @@ if(isset($_POST['update'])) {
     var_dump($r1);
 }
 ?>
+<!--Form for user input for updating data-->
 <form action="index.php?page=updatecar" method="post">
     <div>
         <input type="hidden" name="page" value="insert">
@@ -39,4 +41,5 @@ if(isset($_POST['update'])) {
         <input type="submit" value="Update" name="update">
     </div>
 </form>
+<!--Back button-->
 <button onclick="history.go(-1);">Back </button>

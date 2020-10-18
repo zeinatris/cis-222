@@ -1,4 +1,5 @@
 <?php
+//This finds the price of the cars that user entered
 if(isset($_POST['find'])) {
     $pr = $_POST['price'];
     $qry = "SELECT * FROM `midterm_cars` WHERE `CarPrice`='$pr'";
@@ -19,6 +20,7 @@ if(isset($_POST['find'])) {
     }
 }
 ?>
+<!--The user has to enter input and get a result-->
 <form action="index.php?page=findcar" method="post">
     <div>
         <input type="hidden" name="page" value="insert">
@@ -28,4 +30,5 @@ if(isset($_POST['find'])) {
         <input type="submit" value="search" name="find">
     </div>
 </form>
+<!--Back button-->
 <button onclick="history.go(-1);">Back </button>

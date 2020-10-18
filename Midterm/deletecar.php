@@ -1,10 +1,11 @@
 <?php
-
+//This deletes date from the database//
 if(isset($_POST['DeleteBtn'])){
     $id = $_POST['btnDelete'];
 $pdo->query("DELETE FROM `midterm_cars` WHERE CarID = '$id'");
 }
 ?>
+<!--This shows you whats in the database-->
 <div>
 <table>
     <tr>
@@ -35,4 +36,5 @@ while ($row = $stmt -> fetch()){?>
 <?php
 }
 ?>
+<!--Back button-->
 <button onclick="history.go(-1);">Back </button>

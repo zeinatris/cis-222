@@ -1,4 +1,6 @@
-<?php    if(isset($_POST['insert'])){
+<?php
+//This inserts the date into the database
+if(isset($_POST['insert'])){
     if(empty($_POST['id'] || empty($_POST['make']) || empty($_POST['model']) || empty($_POST['price']) || empty($_POST['year'])))
     {
         echo "Please fill in blanks";
@@ -31,6 +33,7 @@
 
 }
 ?>
+<!--Form user input for inserting the data-->
 <form action="index.php?page=insertcar" method="post">
     <div>
         <input type="hidden" name="page" value="insert">
@@ -51,4 +54,5 @@
         <input type="submit" value="insert" name="insert">
     </div>
 </form>
+<!--Back Button-->
 <button onclick="history.go(-1);">Back </button>
