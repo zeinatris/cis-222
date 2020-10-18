@@ -1,5 +1,5 @@
 <?php
-
+include('../../../creds.php');
 /* this connects to the database*/
 $host = '127.0.0.1';
 $db = 'zhatris';
@@ -21,10 +21,10 @@ $pdo = new PDO($dsn, $user, $pass, $opt);
 
 <?php
 $qry1 = 'SHOW TABLES';
-$all = array('Contact'); var_dump($all);
-$stmt = $pdo->query( $qry1 );
+$de = 'DESCRIBE';
+$stmt = $pdo->query( $de );
 $r1 = $stmt -> execute();
-while ($row = $stmt -> fetch()):
+while ($row = $stmt -> fetch($r1)):
     ?>
     <a href='describeTable.php?page=<?php echo $row["Tables_in_zhatris"];?>'><?php echo $row["Tables_in_zhatris"];?></a><br>
 

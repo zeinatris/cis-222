@@ -49,17 +49,18 @@ INSERT INTO `Product`(
     `ItemDescription`,
     `ItemPrice`,
     `ItemQty`,
+    `Img`,
     `create_date`,
     `update_date`,
     `delete_date`
 )
 VALUES
-(1,'NBA 2K2O PS4','<p>This is brand new never been opened</p>','59.99','100',NOW(),NOW(),NULL),
-(2,'MADDEN 20 PS4','<p>This is brand new never been opened</p>','59.99','10',NOW(),NOW(),Null),
-(3,'FIFA 20 PS4','<p>This is brand new never been opened</p>','59.99','20',NOW(),NOW(),NULL),
-(4,'DARSIDERS III PS4','<p>This is brand new never been opened</p>','19.99','20',NOW(),NOW(),NULL),
-(5,'CALL OF DUTY MW PS4','<p>This is brand new never been opened</p>','49.99','30',NOW(),NOW(),NULL),
-(6,'GTA V PS4','<p>This is brand new never been opened</p>','29.99','30',NOW(),NOW(),NULL);
+(1,'NBA 2K2O PS4','<p>This is brand new never been opened</p>','59.99','100','images/nba20.png',NOW(),NOW(),NULL),
+(2,'MADDEN 20 PS4','<p>This is brand new never been opened</p>','59.99','10','images/madden20.png',NOW(),NOW(),Null),
+(3,'FIFA 20 PS4','<p>This is brand new never been opened</p>','59.99','20','images/fifa20.png',NOW(),NOW(),NULL),
+(4,'DARSIDERS III PS4','<p>This is brand new never been opened</p>','19.99','20','images/darksiders3.png',NOW(),NOW(),NULL),
+(5,'CALL OF DUTY MW PS4','<p>This is brand new never been opened</p>','49.99','30','images/callofduty.png',NOW(),NOW(),NULL),
+(6,'GTA V PS4','<p>This is brand new never been opened</p>','29.99','30','images/gtav.png',NOW(),NOW(),NULL);
 
 
 SELECT * FROM `Customer`;

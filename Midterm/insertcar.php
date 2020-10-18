@@ -31,10 +31,9 @@
 
 }
 ?>
-<form action="index.php" method="post">
+<form action="index.php?page=insertcar" method="post">
     <div>
         <input type="hidden" name="page" value="insert">
-        <input type="hidden" name="action" value="add_insert">
         <label for="id">Car ID: </label>
         <input id="id" type="text" name="id" placeholder="Id" required><br> <br>
 

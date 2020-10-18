@@ -8,8 +8,8 @@ while ($row = $stmt -> fetch())  {
 
     ?>
     <div class="box">
-        <form action="index.php" method="get">
-            <div class="item1"><img src="images/nba20.png" alt="logo"/>
+        <form action="index.php?page=catalog" method="get">
+            <div class="item1"><img src="<?php echo $row['Img'];?>" alt="logo"/>
                 <p><a class="Title" href="#"><?php echo $row['ItemName']; ?></a></>
                 <p>$<?php echo $row['ItemPrice'] ?></p>
                 <p>
