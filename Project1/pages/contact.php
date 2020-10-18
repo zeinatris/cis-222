@@ -1,4 +1,6 @@
-<?php    if(isset($_POST['insert'])){
+<?php
+//This inserts data to the database//
+if(isset($_POST['insert'])){
     if(empty($_POST['name'] || empty($_POST['email']) || empty($_POST['message'])))
     {
         echo "Please fill in blanks";
@@ -40,7 +42,7 @@
 
     <p>Fields marked with an * are required</p>
 
-
+<!--This form inserts the data to the database-->
     <form action="index.php?page=contact" method="post">
         <input type="hidden" name="page" value="contact">
         <label for="name">Name: </label>

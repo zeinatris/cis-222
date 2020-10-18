@@ -1,13 +1,13 @@
 <?php
 //This inserts the date into the database
 if(isset($_POST['insert'])){
-    if(empty($_POST['id'] || empty($_POST['make']) || empty($_POST['model']) || empty($_POST['price']) || empty($_POST['year'])))
+    if(empty($_POST['make']) || empty($_POST['model']) || empty($_POST['price']) || empty($_POST['year']))
     {
         echo "Please fill in blanks";
     }
     else
     {
-        $id = $_POST['id'];
+
         $make = $_POST['make'];
         $model = $_POST['model'];
         $price= $_POST['price'];
@@ -16,7 +16,7 @@ if(isset($_POST['insert'])){
         $qry =  " INSERT INTO `midterm_cars`
         ( `CarId`,`CarMake`,`CarModel`,`CarPrice`,`CarYear`)
 					VALUES
-					('$id', '$make','$model', '$price', '$year' );  ";
+					(NULL , '$make','$model', '$price', '$year' );  ";
 
         $stmt = $pdo->prepare ($qry);
         $r1 = $stmt -> execute();
@@ -37,8 +37,6 @@ if(isset($_POST['insert'])){
 <form action="index.php?page=insertcar" method="post">
     <div>
         <input type="hidden" name="page" value="insert">
-        <label for="id">Car ID: </label>
-        <input id="id" type="text" name="id" placeholder="Id" required><br> <br>
 
         <label for="name">Car Make: </label>
         <input id="name" type="text" name="make" placeholder="Make" required><br> <br>
