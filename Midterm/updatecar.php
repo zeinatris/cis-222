@@ -11,9 +11,9 @@ if(isset($_POST['update'])) {
     $stmt = $pdo->prepare($qry);
     $r1 = $stmt->execute();
     if ($r1) {
-        echo "Data has been inserted";
+        echo "Data has been updated";
     } else {
-        echo "Data has not been inserted";
+        echo "Data has not been updated";
     }
     var_dump($r1);
 }
