@@ -1,5 +1,5 @@
 <?php
-//This inserts the date into the database
+//This inserts data to the database//
 if(isset($_POST['insert'])){
     if(empty($_POST['make']) || empty($_POST['model']) || empty($_POST['price']) || empty($_POST['year']))
     {
@@ -7,7 +7,6 @@ if(isset($_POST['insert'])){
     }
     else
     {
-
         $make = $_POST['make'];
         $model = $_POST['model'];
         $price= $_POST['price'];
@@ -28,12 +27,12 @@ if(isset($_POST['insert'])){
         {
             echo "Data has not been inserted";
         }
-        var_dump($r1);
+
     }
 
 }
 ?>
-<!--Form user input for inserting the data-->
+<!--This form inputs the data to database-->
 <form action="index.php?page=insertcar" method="post">
     <div>
         <input type="hidden" name="page" value="insert">
@@ -42,7 +41,7 @@ if(isset($_POST['insert'])){
         <input id="name" type="text" name="make" placeholder="Make" required><br> <br>
 
         <label for="name">Car Model: </label>
-        <input id="name" type="text" name="model" placeholder="model" required><br> <br>
+        <input id="name" type="text" name="model" placeholder="Model" required><br> <br>
 
         <label for="price">Car Price: </label>
         <input id="price" type="text" name="price" placeholder="Price" required><br> <br>
@@ -52,5 +51,5 @@ if(isset($_POST['insert'])){
         <input type="submit" value="insert" name="insert">
     </div>
 </form>
-<!--Back Button-->
+<!--Back button-->
 <button onclick="history.go(-1);">Back </button>

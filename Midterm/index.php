@@ -1,8 +1,8 @@
 <?php
 /**
- * Exam
+ * Midterm
  *
- * @category   SQL
+ * @category   SQL and PHP
  * @package    CIS-222
  * @author     Zein Atris
  * @date       2020.10.18
@@ -11,7 +11,7 @@
  * @link https://cislinux.hfcc.edu/~zhatris/cis222/Midterm/index.php
  */
 ?>
-<!--header-->
+<!--Header-->
 <head>
     <title>Midterm</title>
 </head>
@@ -32,7 +32,7 @@ include ('db.php');
 require ('render.php');
 
 
-//This displays the name of the cars//
+//This lists the car Id,Make,Model,Price and Year//
 $qry1 = "SELECT * FROM `midterm_cars`";
 
 $stmt = $pdo->prepare( $qry1 );
@@ -49,7 +49,7 @@ while ($row = $stmt -> fetch()) {
     <?php
 }
 
-//This displays how many cars on the lot//
+//This counts how many cars are on the lot//
 $qry = 'SELECT COUNT(*) FROM `midterm_cars`; ';
 
 $r = $pdo->query( $qry );
@@ -59,7 +59,7 @@ while ($row = $r->fetch())
     echo '<br><br>There are ' . $row["COUNT(*)"] . ' cars on the lot.';
 }
 
-//This displays the average cost of the cars//
+//This gets the average amount of the cost//
 $qry = 'SELECT AVG(CarPrice) AS PriceAverage FROM `midterm_cars`;';
 
 $r = $pdo->query( $qry );

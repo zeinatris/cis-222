@@ -1,5 +1,5 @@
 <?php
-//This updates the data//
+//This updates data from the database//
 if(isset($_POST['update'])) {
     $id = $_POST['id'];
     $make = $_POST['make'];
@@ -16,10 +16,10 @@ if(isset($_POST['update'])) {
     } else {
         echo "Data has not been updated";
     }
-    var_dump($r1);
+
 }
 ?>
-<!--Form for user input for updating data-->
+<!--This inputs the data that you want to update-->
 <form action="index.php?page=updatecar" method="post">
     <div>
         <input type="hidden" name="page" value="insert">
@@ -31,7 +31,7 @@ if(isset($_POST['update'])) {
         <input id="name" type="text" name="make" placeholder="Make" required><br> <br>
 
         <label for="name">Car Model: </label>
-        <input id="name" type="text" name="model" placeholder="model" required><br> <br>
+        <input id="name" type="text" name="model" placeholder="Model" required><br> <br>
 
         <label for="price">Car Price: </label>
         <input id="price" type="text" name="price" placeholder="Price" required><br> <br>

@@ -1,5 +1,5 @@
 <?php
-//This inserts data to the database//
+//This inserts users data to the database//
 if(isset($_POST['insert'])){
     if(empty($_POST['name'] || empty($_POST['email']) || empty($_POST['message'])))
     {
@@ -20,13 +20,13 @@ if(isset($_POST['insert'])){
         $r1 = $stmt -> execute();
         if($r1)
         {
-            echo "Data has been inserted";
+            echo "Message sent Successfully";
         }
         else
         {
-            echo "Data has not been inserted";
+            echo "Message has not been sent";
         }
-        var_dump($r1);
+
     }
 
 }
