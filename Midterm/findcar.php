@@ -28,3 +28,4 @@ if(isset($_POST['find'])) {
         <input type="submit" value="search" name="find">
     </div>
 </form>
+<button onclick="history.go(-1);">Back </button>
