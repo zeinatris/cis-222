@@ -6,9 +6,9 @@
  * @package    CIS-222
  * @author     Zein Atris
  * @date       2020.10.08
- * @grade
- * @comments
- * @link https://cislinux.hfcc.edu/~zhatris/cis222/HW4/index.php
+ * @grade      5 / 10
+ * @comments   Page does not load due to an error.
+ * @link       https://cislinux.hfcc.edu/~zhatris/cis222/HW4/index.php
  */
 require ('describeTable.php');
 /*Connecting to the database*/
