@@ -8,6 +8,6 @@
 
 <!--logo-->
 <div class="header">
-    <a href="#" title="Login / Register">Login / Register</a>
+    <a href="index.php?page=login" title="Login / Register">Login / Register</a>
     <img src="images/USDEALS1.png" alt="logo"/>
 </div>

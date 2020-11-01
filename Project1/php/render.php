@@ -24,6 +24,12 @@ if( isset($_GET['page']) )
         case 'catalog':
             require('pages/catalog.php');
             break;
+        case 'detail':
+            require('pages/detail.php');
+            break;
+        case 'login':
+            require('pages/login.php');
+            break;
         default:
             require('pages/404.php');
     }

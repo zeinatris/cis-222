@@ -9,6 +9,7 @@ CREATE TABLE `Customer`(
    `State`      varchar (60) NOT NULL,
    `PhoneNumber` int NOT NULL,
    `Notes`       varchar (200) NOT NULL,
+   `Password`    varchar(60) NOT NULL,
    `create_date` DATETIME NOT NULL,
    `update_date` DATETIME NOT NULL,
    `delete_date` DATETIME DEFAULT NULL,
@@ -62,7 +63,7 @@ VALUES
 (5,'CALL OF DUTY MW PS4','<p>This is brand new never been opened</p>','49.99','30','images/callofduty.png',NOW(),NOW(),NULL),
 (6,'GTA V PS4','<p>This is brand new never been opened</p>','29.99','30','images/gtav.png',NOW(),NOW(),NULL);
 
-
+DROP TABLE `Customer`;
 SELECT * FROM `Customer`;
 SELECT * FROM `Product`;
 SELECT * FROM `Contact`;
