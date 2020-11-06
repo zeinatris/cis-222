@@ -1,16 +1,17 @@
 <?php
+//Object class
 class MyBaseObject{
     private $content;
     private $name;
     private $phone;
-
+    //Construct
     function __construct($con,$ph,$na)
     {
         $this->content = $con;
         $this->name = $na;
         $this->phone = $ph;
     }
-
+    //Getters and Setter
     function file_get_Content(){
         return $this->content;
     }
@@ -37,7 +38,7 @@ class MyBaseObject{
     {
             $this->phone = $ph;
     }
-
+    //This shows the content
     function show()
     {
     echo '<h3>Homework 5</h3>';

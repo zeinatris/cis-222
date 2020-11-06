@@ -6,7 +6,7 @@
  *
  * @category    OOP
  * @package     Quiz 6
- * @author      YOUR NAME <YOUREMAIL@hfcc.edu>
+ * @author      Zein Atris <zhatris@hfcc.edu>
  * @version     2020.11.05
  * @grade
  */
