@@ -1,4 +1,17 @@
 <?php
+/**
+ *
+ *
+ * Homework 5
+ *
+ *
+ * @category   Homework
+ * @package    Homework 5
+ * @author    Zein Atris <zhatris@hawkmail.hfcc.edu>
+ * @version    2020.11.04
+ * @link       https://cislinux.hfcc.edu/~zhatris/cis222/HW5/index.php
+ * @grade
+ */
 require( 'MyBaseObject.php' );
 require( 'MyFileObject.php' );
 $newObj = new MyBaseObject( ' Go ', ' 3135572233 ', 'Zein');
