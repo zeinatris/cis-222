@@ -6,7 +6,7 @@
  * @package    CIS-222
  * @author     Zein Atris
  * @date       2020.10.18
- * @grade
+ * @grade      90 / 100
  * @comments
  * @link https://cislinux.hfcc.edu/~zhatris/cis222/Midterm/index.php
  */
