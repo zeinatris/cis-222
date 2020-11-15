@@ -8,7 +8,7 @@
  * @package     Quiz 6
  * @author      Zein Atris <zhatris@hfcc.edu>
  * @version     2020.11.05
- * @grade
+ * @grade       10 / 10
  */
 
 // 1. (4pts) Define a simple class called Order.
@@ -45,7 +45,7 @@ class order {
 
 // 3. (2pt) In a $myTransaction variable, create an instance of the class you created above.
     $order = new order();
-    $myTransaction = new $order();
+    // $myTransaction = new $order();
 
 // B. (1pt) Explain how someone could use an object like this.
 // Could you use something like this in your project?
