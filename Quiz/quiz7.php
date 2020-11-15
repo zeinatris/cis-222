@@ -35,7 +35,7 @@ $_SESSION['current_user_id']=$uid;
 //              Your user ID is Z.
 echo'<p>My favorite loop is:'.$_COOKIE['favLoop'].'</p>';
 echo'<p>My favorite object is:'.$_COOKIE['favObject'].'</p>';
-echo'<p>Your user id is:'.$_COOKIE['current_user_id'].'</p>';
+echo'<p>Your user ID is:'.$_COOKIE['current_user_id'].'</p>';
 // B. (1pt) What must you do before using the $_SESSION array?
 
 
