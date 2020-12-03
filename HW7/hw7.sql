@@ -1,0 +1,9 @@
+USE zhatris;
+SHOW TABLES;
+CREATE TABLE `Image` (
+    `ImageID` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `ImageURL` VARCHAR(255) NOT NULL,
+    PRIMARY KEY (`ImageID`)
+);
+
+SELECT * FROM `Image`

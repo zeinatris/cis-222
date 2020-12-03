@@ -31,6 +31,8 @@ if( isset($_SESSION[$key]) )
     $output = $_SESSION[$key];
 }
 ?>
+<--This is to get information from the user-->
+
     <html lang="en">
     <body>
     <link rel="stylesheet" href="style.css">

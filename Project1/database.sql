@@ -40,6 +40,34 @@ CREATE TABLE `Contact`(
    PRIMARY KEY (`ContactId`)
 );
 
+CREATE TABLE `order_items` (
+    `order_item_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `order_id` BIGINT UNSIGNED NOT NULL,
+    `product_id` BIGINT UNSIGNED NOT NULL,
+    `item_qty` SMALLINT UNSIGNED NOT NULL,
+    `item_price` BIGINT UNSIGNED NOT NULL,
+    `item_name` varchar(150) NOT NULL,
+    `img` blob,
+    `order_item_created_date` DATETIME NOT NULL,
+    `order_item_updated_date` DATETIME NOT NULL,
+    `order_item_deleted_date` DATETIME NOT NULL,
+    PRIMARY KEY (`order_item_id`)
+);
+
+
+CREATE TABLE `Cart` (
+    `cart_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `cart_qty` SMALLINT UNSIGNED NOT NULL,
+    `item_name` varchar(150) NOT NULL,
+    `product_id` BIGINT UNSIGNED NOT NULL,
+    `account_id` BIGINT UNSIGNED NOT NULL,
+    `cart_data` LONGTEXT,
+    `created_date` DATETIME NOT NULL,
+    `updated_date` DATETIME NOT NULL,
+    `removed_date` DATETIME NOT NULL,
+    PRIMARY KEY (`cart_id`)
+);
+DROP TABLE `order_items`;
 DESCRIBE `Customer`;
 DESCRIBE `Product`;
 DESCRIBE `Contact`;
