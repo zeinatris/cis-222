@@ -2,11 +2,11 @@
 /**
  *
  *
- * Homework 6
+ * Homework 7
  *
  *
  * @category   Homework
- * @package    Homework 6
+ * @package    Homework 7
  * @author     Zein Atris <zhatris@hawkmail.hfcc.edu>
  * @version    2020.12.3
  * @link       https://cislinux.hfcc.edu/~zhatris/cis222/HW7/index.php
