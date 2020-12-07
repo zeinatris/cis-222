@@ -15,10 +15,13 @@
             $total = 0;
             foreach ($_SESSION['cart'] as $key => $value) {
                 ?>
+                <tr>
                 <td><?php echo $value["item_name"]; ?></td>
                 <td>$ <?php echo $value["item_quantity"]; ?></td>
                 <td>$ <?php echo number_format($value["item_quantity"] * $value["product_price"], 2); ?></td>
-                <td><a hfef="cart.php?action=delete&id=<?php echo $value["product_id"]; ?>"><span class="text-d"></span></a></td>
-</div>
+                <td><a hfef="catalog.php?action=delete&id=<?php echo $value["product_id"]; ?>"><span class="text-d">X</span></a></td>
+                </tr>
+                </div>
+
     <?php}
 }?>

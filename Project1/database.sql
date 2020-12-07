@@ -7,7 +7,7 @@ CREATE TABLE `Customer`(
    `Address`       varchar(60) NOT NULL,
    `City`       varchar(60) NOT NULL,
    `State`      varchar (60) NOT NULL,
-   `PhoneNumber` int NOT NULL,
+   `PhoneNumber` varchar(16) NOT NULL,
    `Notes`       varchar (200) NOT NULL,
    `Password`    varchar(60) NOT NULL,
    `create_date` DATETIME NOT NULL,
@@ -15,7 +15,7 @@ CREATE TABLE `Customer`(
    `delete_date` DATETIME DEFAULT NULL,
    PRIMARY KEY (`CustomerId`)
 );
-
+drop table `Customer`;
 CREATE TABLE `Product`(
    `ItemNumber` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
    `ItemName` VARCHAR(200) NOT NULL,
