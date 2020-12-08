@@ -8,7 +8,7 @@
  * @package     Quiz 7
  * @author      Zein Atris <zhatris@hawkmail.hfcc.edu>
  * @version     2020.11.12
- * @grade
+ * @grade       10 / 10
  */
 
 // 1. (2pts) Using a PHP function, save a cookie named favLoop.
@@ -38,5 +38,5 @@ echo'<p>My favorite object is:'.$_COOKIE['favObject'].'</p>';
 echo'<p>Your user ID is:'.$_COOKIE['current_user_id'].'</p>';
 // B. (1pt) What must you do before using the $_SESSION array?
 
-
+session_start();
 
