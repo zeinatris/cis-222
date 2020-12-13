@@ -8,7 +8,7 @@
  * @package     Quiz 8
  * @author      zhatris <zhatris@hawkmail.hfcc.edu>
  * @version     2020.11.19
- * @grade
+ * @grade       11 / 10
  */
 
 // 1. (6pts) Write the PHP needed below to send an email.
