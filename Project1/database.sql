@@ -9,6 +9,7 @@ CREATE TABLE `Customer`(
    `State`      varchar (60) NOT NULL,
    `PhoneNumber` varchar(16) NOT NULL,
    `Notes`       varchar (200) NOT NULL,
+   `Email`       varchar(200) NOT NULL,
    `Password`    varchar(60) NOT NULL,
    `create_date` DATETIME NOT NULL,
    `update_date` DATETIME NOT NULL,
@@ -41,24 +42,34 @@ CREATE TABLE `Contact`(
 );
 
 CREATE TABLE `order_items` (
-    `order_item_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
-    `order_id` BIGINT UNSIGNED NOT NULL,
-    `product_id` BIGINT UNSIGNED NOT NULL,
-    `item_qty` SMALLINT UNSIGNED NOT NULL,
-    `item_price` BIGINT UNSIGNED NOT NULL,
-    `item_name` varchar(150) NOT NULL,
-    `img` blob,
-    `order_item_created_date` DATETIME NOT NULL,
-    `order_item_updated_date` DATETIME NOT NULL,
-    `order_item_deleted_date` DATETIME NOT NULL,
-    PRIMARY KEY (`order_item_id`)
-);
+  `id` int(14) NOT NULL AUTO_INCREMENT,
+  `order_id` int(14) NOT NULL,
+  `item_number` int(4) NOT NULL,
+  `item_name` varchar(255) NOT NULL,
+  `quantity` decimal(9,2) NOT NULL,
+  `price` decimal(9,2) NOT NULL,
+   PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+CREATE TABLE `orders` (
+    `id` int(14) NOT NULL AUTO_INCREMENT,
+    `date` datetime NOT NULL,
+    `ship_fee` decimal(9,2) NOT NULL,
+    `ship_name` varchar(255) NOT NULL,
+    `Ship_street` varchar(255) NOT NULL,
+    `ship_city` varchar(50) NOT NULL,
+    `ship_state` varchar(50) NOT NULL,
+    `sales_tax` float NOT NULL,
+    `submitted` int(1) NOT NULL DEFAULT '0',
+    `email` varchar(50) NOT NULL,
+    `phone` varchar(50) NOT NULL,
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 CREATE TABLE `Cart` (
     `cart_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
     `cart_qty` SMALLINT UNSIGNED NOT NULL,
-    `item_name` varchar(150) NOT NULL,
+    `item_name` varchar(150) default null,
     `product_id` BIGINT UNSIGNED NOT NULL,
     `account_id` BIGINT UNSIGNED NOT NULL,
     `cart_data` LONGTEXT,
@@ -67,7 +78,8 @@ CREATE TABLE `Cart` (
     `removed_date` DATETIME NOT NULL,
     PRIMARY KEY (`cart_id`)
 );
-DROP TABLE `order_items`;
+
+DROP TABLE `Cart`;
 DESCRIBE `Customer`;
 DESCRIBE `Product`;
 DESCRIBE `Contact`;
@@ -95,3 +107,4 @@ DROP TABLE `Customer`;
 SELECT * FROM `Customer`;
 SELECT * FROM `Product`;
 SELECT * FROM `Contact`;
+SELECT * FROM `Cart`;

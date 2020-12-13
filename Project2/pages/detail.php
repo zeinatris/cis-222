@@ -20,6 +20,7 @@ if(isset($_GET['id'])) {
     <form method="post" >
     <input type="text" name="quantity" class="form" value="1">
          <input type="hidden" name="action" value="cart">
+        <input type="hidden" name="product_id" value="<?php echo $id; ?>">
              <button>Add to Cart</button>
 </form>
 

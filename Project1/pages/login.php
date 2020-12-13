@@ -8,14 +8,13 @@ if(isset($_POST['login'])) {
     $stmt = $pdo->prepare($qry);
     $r1 = $stmt->execute();
     if ($r1 == 1) {
-        $cookieValue = $username;
-        setcookie($cookieName, $cookieValue, time() + (180), "/");
+        $_SESSION['loggedin'] = $username;
     } else {
         echo "Username or Password is incorrect";
     }
 }
 else if(isset($_POST['register'])){
-        if(empty($_POST['name']) || empty($_POST['address']) || empty($_POST['city']) ||  empty($_POST['state']) || empty($_POST['phone']) || empty($_POST['note']) || empty($_POST['pass']))
+        if(empty($_POST['name']) || empty($_POST['address']) || empty($_POST['city']) ||  empty($_POST['state']) || empty($_POST['phone']) || empty($_POST['note']) || empty($_POST['email']) || empty($_POST['pass']))
         {
             echo "Please fill in blanks";
         }
@@ -27,13 +26,14 @@ else if(isset($_POST['register'])){
             $s = $_POST['state'];
             $ph = $_POST['phone'];
             $n = $_POST['note'];
+            $e = $_POST['email'];
             $pas1 = $_POST['pass'];
             $pas = sha1(sha1($pas1."salt")."salt");
 
             $qry =  " INSERT INTO `Customer`
-        ( `CustomerID`,`Name`,`Address`,`City`,`State`,`PhoneNumber`,`Notes`,`Password`,`create_date`,`update_date`,`delete_date`)
+        ( `CustomerID`,`Name`,`Address`,`City`,`State`,`PhoneNumber`,`Notes`, `Email`, `Password`,`create_date`,`update_date`,`delete_date`)
 					VALUES
-					(NULL , '$u','$a', '$c','$s', '$ph','$n','$pas',NOW(),NOW(),NULL);  ";
+					(NULL , '$u','$a', '$c','$s', '$ph','$n', '$e','$pas',NOW(),NOW(),NULL);  ";
 
             $stmt = $pdo->prepare ($qry);
             $r1 = $stmt -> execute();
@@ -86,6 +86,9 @@ else if(isset($_POST['register'])){
 
         <label for="note">Note: </label>
         <input id="note" type="text" name="note" placeholder="Note" required><br> <br>
+
+        <label for="email">Email: </label>
+        <input id="email" type="email" name="email" placeholder="Email" required><br> <br>
 
         <label for="pass">Password: </label>
         <input id="pass" type="password" name="pass" placeholder="Password" required><br> <br>

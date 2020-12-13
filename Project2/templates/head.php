@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/style.css" rel="stylesheet">
 </head>
-
+<?php
+$itemsCurrentlyInCart = 2;
+?>
 <!--logo-->
 <div class="header">
 <?php
-    if($_SESSION['loggedin']){
+    if(isset($_SESSION['user_id']) && $_SESSION['user_id']){
     ?>
-        <a href="index.php?page=signout" title="SignOut">SignOut</a>
+        <a href="index.php?page=signout" title="SignOut">Sign Out</a>
     <?php
     }
     else{
