@@ -35,7 +35,7 @@ Quiz 10: 0 / 10<br />
 **Final Exam: 0 / 100 (Not graded yet)**<br />
 <br />
 
-### Assignments + Examination Total: 402.5 / 600
+### Assignments + Examination Total: 402.5 / 420 (600)
 
 Note, the following items may still be graded.
 <ul>
@@ -44,6 +44,8 @@ Note, the following items may still be graded.
         <li>Project Part II</li>
         <li>Final Exam</li>
 </ul>
+
+These items bring the total possible points up from 420 to 600.
 
 92% - 100% A (552 – 600)<br />
 84% - 91% B (504 – 551)<br />
