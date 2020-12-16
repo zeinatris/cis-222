@@ -3,11 +3,9 @@ if(isset($_POST['DeleteBtn'])){
 $id = $_POST['btnDelete'];
 $pdo->query("DELETE FROM `Cart` WHERE cart_id = '$id'");
 }
-var_dump($_POST);
 if(isset($_POST['UpdateBtn'])){
-    $qty = $_POST['btnDelete'];
-
-    $pdo->prepare( "UPDATE `Cart` SET `cart_qty`='" . $qty . "'");
+    $qty = $_POST['qty1'];
+    $pdo->query( "UPDATE `Cart` SET `cart_qty`='" . $qty . "'");
 }
 ?>
 <!--This shows you whats in the database-->
@@ -30,8 +28,9 @@ while ($row = $stmt -> fetch()){?>
         <form action="index.php?page=cart" method="post" name="page">
             <td><input type="checkbox" name="btnDelete" value="<?php echo $row['cart_id'];?>" required></td>
             <td><?php echo $row['item_name'];?></td>
-            <td><input type="text"  value="<?php echo $row['cart_qty'];?>"</td>
+            <td><input type="text"  name="qty1" value="<?php echo $row['cart_qty'];?>"></td>
             <td><?php echo $row['product_id'];?></td>
+            <td>$<?php echo $row['item_price']; ?></td>
 
             <td><input type="submit" value="Delete" name="DeleteBtn"></td>
             <td><input type="submit" value="Update" name="UpdateBtn"></td>
@@ -40,4 +39,7 @@ while ($row = $stmt -> fetch()){?>
     <?php
 }
 ?>
-
+<form action="index.php?page=checkout" method="post" name="page">
+    <input type="hidden" name="action" value="checkout">
+    <button>CheckOut</button>
+</form>

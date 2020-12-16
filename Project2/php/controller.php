@@ -42,6 +42,10 @@ class Controller
             {
                 $this->processAddToCart($pdo);
             }
+            else if ($_POST['action'] == 'checkout')
+            {
+                $this->processcheckout($pdo);
+            }
         }
 
 
@@ -106,21 +110,23 @@ class Controller
     {
         try
         {
+
+
+            $name = $_POST['item_name'];
+            $price = $_POST['item_price'];
+            $qty = $_POST['qty'];
             $desiredProductId = $_POST['product_id']; // TODO : THESE LINES NEED VALIDATION
 
-            ;
             $accountId = $_SESSION['user_id'];
-
-
             // TODO : YOU MAY NEED TO HANDLE GUEST CHECKOUT
 
             $qry = "INSERT INTO `Cart`
-               (`cart_id`, `cart_qty`, `product_id`, `account_id`, `cart_data`, `created_date`, `updated_date`, `removed_date`)
+               (`cart_id`, `cart_qty`, `product_id`, `account_id`, `item_name`, `item_price`, `cart_data`, `created_date`, `updated_date`, `removed_date`)
                VALUES
-               ( NULL, 1, ?, ?, 'Random Text', NOW(), NOW(), NOW() );  ";
+               ( NULL, 1, ?, ?, ?, ?, 'Random Text', NOW(), NOW(), NOW() );  ";
 
             $stmt = $pdo->prepare($qry);
-            $r = $stmt->execute([$desiredProductId, $accountId]);
+            $r = $stmt->execute([$desiredProductId, $accountId, $name, $price]);
 
             if ($r)
             {
@@ -133,6 +139,39 @@ class Controller
             $_SESSION['cart_message'] = '<div class="alert alert-danger" role="alert">' . $e -> getMessage(). '</div>';
         }
     }
+
+    function processcheckout( $pdo )
+    {
+        try
+        {
+
+            $name = $_POST['name1'];
+            $address = $_POST['address1'];
+            $city = $_POST['city1'];
+            $state = $_POST['state1'];
+            $phone = $_POST['phone1'];
+
+            $qry = "INSERT INTO `orders`
+               (`order_id`, `ship_name`, `Ship_street`, `ship_city`, `ship_state`, `phone`, `date`)
+               VALUES
+               ( NULL, ?, ?, ?, ?, ?, NOW() );  ";
+
+            $stmt = $pdo->prepare($qry);
+            $r = $stmt->execute([$name, $address, $city, $state, $phone]);
+
+            if ($r)
+            {
+                $_SESSION['checkout_message'] = '<div class="alert alert-success" role="alert">Thank you</div>';
+            }
+        }
+        catch(Exception $e)
+        {
+            var_dump($e -> getMessage());
+            $_SESSION['checkout_message'] = '<div class="alert alert-danger" role="alert">' . $e -> getMessage(). '</div>';
+        }
+    }
+
+
 
 
     function processSignIn( $pdo )

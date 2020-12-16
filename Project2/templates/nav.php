@@ -5,5 +5,6 @@
         <li><a href="index.php?page=about">About Us</a></li>
         <li><a href="index.php?page=contact">Contact Us</a></li>
         <li><a href="index.php?page=catalog">Catalog</a></li>
+        <li><a href="index.php?page=cart" title="cart">Cart</a></li>
     </ul>
 </nav>

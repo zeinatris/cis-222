@@ -33,6 +33,9 @@ if( isset($_GET['page']) )
         case 'cart':
             require('pages/cart.php');
             break;
+        case 'checkout':
+            require('pages/checkout.php');
+            break;
         default:
             require('pages/404.php');
     }

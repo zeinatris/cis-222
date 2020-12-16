@@ -1,4 +1,19 @@
 <?php
+/**
+ * index.php
+ *
+ * Project Part 2
+ *
+ * @category   	P2
+ * @package    	CIS-222
+ * @author     	Zein Atris
+ * @version    	2020.11.15
+ * @link       	https://cislinux.hfcc.edu/~zhatris/cis222/Project2/
+ *
+ * @grade
+ *
+ */
+
 
 session_start();
 

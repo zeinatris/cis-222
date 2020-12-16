@@ -13,10 +13,10 @@ while ($row = $stmt -> fetch())  {
             <div class="item1"><img src="<?php echo $row['Img'];?>" alt="logo"/>
                 <p><a class="Title" href="index.php?page=detail&id=<?php echo $row['ItemNumber']?>"><?php echo $row['ItemName']; ?></a>
                 <p>$<?php echo $row['ItemPrice'] ?></p>
-                <input type="text" name="qty" class="form" value="1">
+                <input type="text" name="quantity" class="form" value="1">
                 <input type="hidden" name="hidden_name" value="<?php echo $row['ItemName']; ?>">
                 <input type="hidden" name="hidden_price" value="<?php echo $row['ItemPrice']; ?>"><br><br>
-                <input type="submit" name="" class="btn1" value="Add to Cart">
+                <input type="submit" name="action" class="btn1" value="Add to Cart">
             </div>
         </form>
     </div>

@@ -8,6 +8,7 @@ CREATE TABLE `locations` (
   PRIMARY KEY(`location_id`)
 );
 select * from locations;
+
 CREATE TABLE `order_items` (
 
   `order_item_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -20,6 +21,7 @@ CREATE TABLE `order_items` (
   `order_item_deleted_date` DATETIME NOT NULL,
   PRIMARY KEY (`order_item_id`)
 );
+
 drop table `order_items`;
 CREATE TABLE `Customer`(
  `CustomerID` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -30,9 +32,35 @@ CREATE TABLE `Customer`(
  `delete_date` DATETIME DEFAULT NULL,
  PRIMARY KEY (`CustomerId`)
 );
-drop table `locations`;
+
+CREATE TABLE `orders` (
+    `order_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `date` datetime NOT NULL,
+    `ship_name` varchar(255) NOT NULL,
+    `Ship_street` varchar(255) NOT NULL,
+    `ship_city` varchar(50) NOT NULL,
+    `ship_state` varchar(50) NOT NULL,
+    `phone` varchar(50) NOT NULL,
+    PRIMARY KEY (`order_id`)
+);
+
+CREATE TABLE `Cart` (
+  `cart_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `cart_qty` SMALLINT UNSIGNED NOT NULL,
+  `item_name` varchar(150) NOT NULL,
+  `item_price` Decimal (7,2) NOT NULL,
+  `product_id` BIGINT UNSIGNED NOT NULL,
+  `account_id` BIGINT UNSIGNED NOT NULL,
+  `cart_data` LONGTEXT,
+  `created_date` DATETIME NOT NULL,
+  `updated_date` DATETIME NOT NULL,
+  `removed_date` DATETIME default NULL,
+  PRIMARY KEY (`cart_id`)
+);
+
+drop table `orders`;
 SHOW TABLES;
 
 DESCRIBE `locations`;
 
-select * from `Customer`;
+select * from `orders`;
