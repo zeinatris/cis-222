@@ -69,13 +69,14 @@ CREATE TABLE `orders` (
 CREATE TABLE `Cart` (
     `cart_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
     `cart_qty` SMALLINT UNSIGNED NOT NULL,
-    `item_name` varchar(150) default null,
+    `item_name` varchar(150) NOT NULL,
+    `item_price` Decimal (7,2) NOT NULL,
     `product_id` BIGINT UNSIGNED NOT NULL,
     `account_id` BIGINT UNSIGNED NOT NULL,
     `cart_data` LONGTEXT,
     `created_date` DATETIME NOT NULL,
     `updated_date` DATETIME NOT NULL,
-    `removed_date` DATETIME NOT NULL,
+    `removed_date` DATETIME default NULL,
     PRIMARY KEY (`cart_id`)
 );
 

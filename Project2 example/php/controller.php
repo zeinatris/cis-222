@@ -55,7 +55,7 @@ class Controller
             {
                 if( isset($_SESSION['user_id']) && $_SESSION['user_id'] )
                 {
-                    header('Location: https://cislinux.hfcc.edu/~zhatris/cis222/Project2/');
+                    header('Location: https://cislinux.hfcc.edu/~zhatris/cis222/Project2ex/');
                 }
             }
         }
@@ -66,7 +66,7 @@ class Controller
         $_SESSION['user_id'] = false;
         $_SESSION['email'] = null;
 
-        header('Location: https://cislinux.hfcc.edu/~zhatris/cis222/Project2/');
+        header('Location: https://cislinux.hfcc.edu/~zhatris/cis222/Project2ex/');
     }
 
     /**
@@ -106,21 +106,23 @@ class Controller
     {
         try
         {
+
+
+            $name = $_POST['item_name'];
+            $price = $_POST['item_price'];
+            $qty = $_POST['qty'];
             $desiredProductId = $_POST['product_id']; // TODO : THESE LINES NEED VALIDATION
 
-            ;
             $accountId = $_SESSION['user_id'];
-
-
             // TODO : YOU MAY NEED TO HANDLE GUEST CHECKOUT
 
             $qry = "INSERT INTO `Cart`
-               (`cart_id`, `cart_qty`, `product_id`, `account_id`, `cart_data`, `created_date`, `updated_date`, `removed_date`)
+               (`cart_id`, `cart_qty`, `product_id`, `account_id`, `item_name`, `item_price`, `cart_data`, `created_date`, `updated_date`, `removed_date`)
                VALUES
-               ( NULL, 1, ?, ?, 'Random Text', NOW(), NOW(), NOW() );  ";
+               ( NULL, 1, ?, ?, ?, ?, 'Random Text', NOW(), NOW(), NOW() );  ";
 
             $stmt = $pdo->prepare($qry);
-            $r = $stmt->execute([$desiredProductId, $accountId]);
+            $r = $stmt->execute([$desiredProductId, $accountId, $name, $price, $qty]);
 
             if ($r)
             {
@@ -150,7 +152,7 @@ class Controller
                 $_SESSION['user_id'] = 2;
                 $_SESSION['email'] = $email;
 
-                header('Location: https://cislinux.hfcc.edu/~zhatris/cis222/Project2/');
+                header('Location: https://cislinux.hfcc.edu/~zhatris/cis222/Project2ex/');
             }
             else
             {

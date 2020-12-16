@@ -18,10 +18,10 @@ if(isset($_GET['id'])) {
         </div>
 
     <form method="post" >
-    <input type="text" name="quantity" class="form" value="1">
+    <input type="text" name="qty" class="form" value="1">
          <input type="hidden" name="action" value="cart">
-        <input type="hidden" name="item_name" value="<?php echo $row['ItemName'];?>"
-        <input type="hidden" name="item_price" value="<?php echo $row['ItemPrice'];?>"
+        <input type="hidden" name="item_name" value="<?php echo $row['ItemName'];?>">
+        <input type="hidden" name="item_price" value="<?php echo $row['ItemPrice'];?>">
         <input type="hidden" name="product_id" value="<?php echo $id; ?>">
              <button>Add to Cart</button>
 </form>

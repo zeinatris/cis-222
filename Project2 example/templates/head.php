@@ -22,8 +22,8 @@ $itemsCurrentlyInCart = 2;
     <?php
     }
     ?>
-
-    <img src="images/USDEALS1.png" alt="logo"/>
     <a href="index.php?page=cart" title="cart">Cart</a>
+    <img src="images/USDEALS1.png" alt="logo"/>
+
     Cart: <?php echo $itemsCurrentlyInCart; ?>
 </div>
