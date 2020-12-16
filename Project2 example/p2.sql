@@ -30,7 +30,19 @@ CREATE TABLE `Customer`(
  `delete_date` DATETIME DEFAULT NULL,
  PRIMARY KEY (`CustomerId`)
 );
-drop table `locations`;
+
+CREATE TABLE `orders` (
+    `order_id` int(14) NOT NULL AUTO_INCREMENT,
+    `date` datetime NOT NULL,
+    `ship_name` varchar(255) NOT NULL,
+    `Ship_street` varchar(255) NOT NULL,
+    `ship_city` varchar(50) NOT NULL,
+    `ship_state` varchar(50) NOT NULL,
+    `phone` varchar(50) NOT NULL,
+    PRIMARY KEY (`order_id`)
+);
+
+drop table `orders`;
 SHOW TABLES;
 
 DESCRIBE `locations`;

@@ -42,6 +42,10 @@ class Controller
             {
                 $this->processAddToCart($pdo);
             }
+            else if ($_POST['action'] == 'checkout')
+            {
+                $this->processcheckout($pdo);
+            }
         }
 
 
@@ -122,7 +126,7 @@ class Controller
                ( NULL, 1, ?, ?, ?, ?, 'Random Text', NOW(), NOW(), NOW() );  ";
 
             $stmt = $pdo->prepare($qry);
-            $r = $stmt->execute([$desiredProductId, $accountId, $name, $price, $qty]);
+            $r = $stmt->execute([$desiredProductId, $accountId, $name, $price]);
 
             if ($r)
             {
@@ -135,6 +139,37 @@ class Controller
             $_SESSION['cart_message'] = '<div class="alert alert-danger" role="alert">' . $e -> getMessage(). '</div>';
         }
     }
+
+    function processcheckout( $pdo )
+    {
+        try
+        {
+
+
+
+            // TODO : YOU MAY NEED TO HANDLE GUEST CHECKOUT
+
+            $qry = "INSERT INTO `orders`
+               (`order_id`, `ship_name`, `Ship_street`, `ship_city`, `ship_state`, `phone`, `credit`, `exp`, `cvv`, `date`)
+               VALUES
+               ( NULL, ?, ?, ?, ?, ?, ?, ?, ?, NOW() );  ";
+
+            $stmt = $pdo->prepare($qry);
+            $r = $stmt->execute([$desiredProductId, $accountId, $name, $price]);
+
+            if ($r)
+            {
+                $_SESSION['cart_message'] = '<div class="alert alert-success" role="alert">Item added to cart!</div>';
+            }
+        }
+        catch(Exception $e)
+        {
+            var_dump($e -> getMessage());
+            $_SESSION['cart_message'] = '<div class="alert alert-danger" role="alert">' . $e -> getMessage(). '</div>';
+        }
+    }
+
+
 
 
     function processSignIn( $pdo )
